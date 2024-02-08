@@ -1,6 +1,12 @@
+export interface Note {
+  date: Date;
+  content: string;
+}
+
 export interface NoteCardProps {
-  note: {
-    date: Date;
-    content: string;
-  };
+  note: Note;
+}
+
+export interface NewNoteCardProps {
+  onNoteCreated: (content: string) => void;
 }
