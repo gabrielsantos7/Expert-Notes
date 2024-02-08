@@ -5,7 +5,8 @@ import { X } from 'lucide-react';
 
 import { NoteCardProps } from '../models';
 
-export default function Notecard({ note }: NoteCardProps) {
+export default function Notecard({ note, onDelete }: NoteCardProps) {
+
   return (
     <Dialog.Root>
       <Dialog.Trigger className='flex flex-col text-left duration-300 rounded-md bg-slate-800 outline-none p-5 gap-3 overflow-hidden relative hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400'>
@@ -37,8 +38,9 @@ export default function Notecard({ note }: NoteCardProps) {
             <p className='text-sm leading-6 text-slate-400'>{note.content}</p>
           </div>
 
-          <button
+          <Dialog.Close
             type='button'
+            onClick={() => onDelete(note.id)}
             className='w-full bg-slate-800 py-4 text-center text-sm text-slate-300 outline-none font-medium group'
           >
             Deseja{' '}
@@ -46,7 +48,7 @@ export default function Notecard({ note }: NoteCardProps) {
               apagar essa nota
             </span>
             ?
-          </button>
+          </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

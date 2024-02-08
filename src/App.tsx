@@ -15,10 +15,19 @@ function App() {
   }, []);
 
   function onNoteCreated(content: string) {
-    const newNotes = [{ date: new Date(), content }, ...notes];
+    const newNotes = [
+      { id: crypto.randomUUID(), date: new Date(), content },
+      ...notes,
+    ];
     setNotes(newNotes);
 
     localStorage.setItem('notes', JSON.stringify(newNotes));
+  }
+
+  function handleDeleteNote(id: string) {
+    const filteredNotes = notes.filter((note) => note.id !== id);
+    setNotes(filteredNotes);
+    localStorage.setItem('notes', JSON.stringify(filteredNotes));
   }
 
   function handleSearch(event: ChangeEvent<HTMLInputElement>) {
@@ -53,7 +62,7 @@ function App() {
         <NewNoteCard onNoteCreated={onNoteCreated} />
 
         {filteredNotes.map((note, index) => (
-          <Notecard key={index} note={note} />
+          <Notecard key={index} onDelete={handleDeleteNote} note={note} />
         ))}
       </div>
     </div>
