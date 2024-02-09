@@ -29,6 +29,10 @@ export default function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     toast.success('Nota criada com sucesso!');
   }
 
+  function handleStartRecording() {
+    console.log('gravando...')
+  }
+
   return (
     <Dialog.Root>
       <Dialog.Trigger className='rounded-md flex flex-col text-left bg-slate-700 p-5 gap-3 outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400 duration-200'>
@@ -66,7 +70,7 @@ export default function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               ) : (
                 <p className='text-sm leading-6 text-slate-400'>
                   Comece{' '}
-                  <button className='text-lime-400 font-medium hover:underline'>
+                  <button onClick={handleStartRecording} className='text-lime-400 font-medium hover:underline'>
                     gravando uma nota em áudio
                   </button>{' '}
                   ou, se preferir,{' '}

@@ -1,8 +1,10 @@
 import { ChangeEvent, useEffect, useState } from 'react';
+import { toast } from 'sonner';
 
 import { Note } from './models';
 import NewNoteCard from './components/NewNoteCard';
 import Notecard from './components/NoteCard';
+
 import Logo from './assets/Logo.svg';
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
     const filteredNotes = notes.filter((note) => note.id !== id);
     setNotes(filteredNotes);
     localStorage.setItem('notes', JSON.stringify(filteredNotes));
+    toast.success('Nota apagada com sucesso!');
   }
 
   function handleSearch(event: ChangeEvent<HTMLInputElement>) {
