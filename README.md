@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📝 **Expert Notes - Aplicação de Notas**
 
-Currently, two official plugins are available:
+Bem-vindo ao Expert Notes, uma aplicação responsiva desenvolvida durante o evento NLW Expert da RocketsEat para gerenciar notas de forma eficiente e conveniente! Com o Expert Notes, você pode criar e visualizar suas notas de maneira fácil e intuitiva. Você pode acessar o Expert Notes [clicando aqui](https://expert-notes.netlify.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ **Recursos**
 
-## Expanding the ESLint configuration
+* **Criação de Notas:** Crie novas notas de forma rápida e simples.
+* **Opção de Digitar ou Gravar Áudio:** Escolha entre digitar suas notas manualmente ou gravar áudio para transcrição automática do texto da nota (verificar disponibilidade do navegador).
+* **Visualização Responsiva:** Desfrute de uma experiência de usuário perfeita em dispositivos de todos os tamanhos, desde smartphones até desktops.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 **Começando**
 
-- Configure the top-level `parserOptions` property like this:
+Para testar a aplicação localmente, siga estas etapas simples:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone este repositório em sua máquina local.
+2. Instale todas as dependências do projeto executando `npm install`.
+3. Inicie o servidor de desenvolvimento com o comando `npm run dev`.
+4. Acesse o aplicativo em seu navegador e comece a criar suas notas!
