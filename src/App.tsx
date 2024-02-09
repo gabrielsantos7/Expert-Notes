@@ -55,11 +55,9 @@ function App() {
           name='search'
           id='search'
           placeholder='Busque em suas notas...'
-          className='w-full bg-transparent text-3xl font-semibold outline-none tracking-tight placeholder:text-slate-500'
+          className='w-full bg-transparent text-xl lg:text-3xl font-semibold outline-none tracking-tight placeholder:text-slate-500 pb-2 border-b border-slate-700'
         />
       </form>
-
-      <div className='h-px bg-slate-700' />
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]'>
         <NewNoteCard onNoteCreated={onNoteCreated} />
